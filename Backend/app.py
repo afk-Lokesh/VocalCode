@@ -1,22 +1,17 @@
-import speech_recognition as sr
+from listeners.listener import MicListener
+from commands.executor import CommandExecutor
 
 def main():
-    recognizer = sr.Recognizer()
-    microphone = sr.Microphone()
+    listener = MicListener()
+    executor = CommandExecutor()
 
-    print("Please say something...")
+    print("Starting voice command listener...")
+    command = listener.listen(timeout=5, phrase_time_limit=10)
 
-    with microphone as source:
-        recognizer.adjust_for_ambient_noise(source)
-        audio = recognizer.listen(source)
-
-    try:
-        transcription = recognizer.recognize_google(audio)
-        print("You said: " + transcription)
-    except sr.RequestError:
-        print("API unavailable or unresponsive")
-    except sr.UnknownValueError:
-        print("Unable to recognize speech")
-
+    if command:
+        print(f"Received command: {command}")
+        executor.execute_command(command)
+    else:
+        print("No command received.")
 if __name__ == "__main__":
     main()
