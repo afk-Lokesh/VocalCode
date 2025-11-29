@@ -1,0 +1,21 @@
+{
+  "name": "visor",
+  "displayName": "VISOR AI Assistant",
+  "publisher": "yourname",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onCommand:visor.start"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "visor.start",
+        "title": "Start VISOR"
+      }
+    ]
+  }
+}
