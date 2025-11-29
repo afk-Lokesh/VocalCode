@@ -1,0 +1,21 @@
+{
+    "name": "visor",
+    "displayName": "VISOR",
+    "version": "0.0.1",
+    "publisher": "yourname",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "activationEvents": [
+        "onCommand:visor.start"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "visor.start",
+                "title": "Start VISOR"
+            }
+        ] 
+    },
+    "main": "./extension.js"
+}
