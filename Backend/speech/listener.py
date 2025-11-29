@@ -3,7 +3,7 @@ import wave
 import time
 import struct
 from wake_word import porcupine, stream
-from whisper_stt import audio_to_text
+from whisper_stt import audio_to_text 
 import requests
 
 # Config
