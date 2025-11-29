@@ -7,3 +7,4 @@ def explain_error(error_text):
         messages=[{"role": "user", "content": f"Explain this error: {error_text}"}]
     )
     return response.choices[0].message.content
+

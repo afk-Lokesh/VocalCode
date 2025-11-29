@@ -26,6 +26,7 @@ porcupine = Porcupine(
     sensitivities=[0.7]
 )
 
+
 pa = pyaudio.PyAudio()
 
 stream = pa.open(

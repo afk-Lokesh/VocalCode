@@ -15,6 +15,7 @@ RECORD_SECONDS = 5
 BACKEND_URL = "http://localhost:8000/execute"
 
 
+
 def record_audio(filename="command.wav"):
     """Record audio from microphone for RECORD_SECONDS"""
     pa = pyaudio.PyAudio()

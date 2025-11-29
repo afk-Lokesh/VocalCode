@@ -10,6 +10,7 @@ function activate(context) {
             "backend/speech/listener.py"
         ]);
 
+        
         listener.stdout.on("data", (data) => {
             console.log(`VISOR: ${data}`);
         });

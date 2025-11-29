@@ -15,3 +15,4 @@ def execute_command(cmd: Command):
         return {'action': 'FORMAT'}
     else:
         return {'action': 'UNKNOWN'}
+
