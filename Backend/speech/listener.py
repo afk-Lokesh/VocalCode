@@ -6,7 +6,7 @@ from wake_word import porcupine, stream
 from whisper_stt import audio_to_text 
 import requests
 
-# Config
+
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
 CHANNELS = 1
